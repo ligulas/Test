@@ -1,0 +1,8 @@
+[2018-02-23 17:27:32.337] [Info] $$ ./log/LightFibre_temp.txt Log File Create!!
+[2018-02-23 17:27:32.338] [Debug] $$ "[From main()]: " 0x25cc
+[2018-02-23 17:27:32.340] [Debug] $$ void QReadIni_config_info::init_global_ip_port_info() " Totally get ServerInfo count:1"
+[2018-02-23 17:27:32.341] [Debug] $$ void QReadIni_config_info::init_global_ip_port_info() " init database_info success: \n db_ip=172.30.31.29\n  db_port=3306\n  db_name=sddl\n  db_user=hoshing\n  db_pass=hoshingpwd "
+[2018-02-23 17:27:32.374] [Debug] $$ virtual void QSocketThread::run() ",ready to into thread event loop," 0x2d90
+[2018-02-23 17:27:35.401] [Debug] $$ void QSocketThread::onSend_GetData_cmd_event() " Server[127.0.0.1] m_socket->state() != QAbstractSocket::ConnectedState"
+[2018-02-23 17:27:38.396] [Debug] $$ "Connection to Server[127.0.0.1] established"
+[2018-02-23 17:30:22.722] [Critical] $$ bool QDataOperator::Insert_Into_Lx_Data_Src_Batch(const QList<_ZX_DATA_SRC>&) "[execBatch error!]: Duplicate entry '124-162-2018-02-23 17:29:32-0-2' for key 'PRIMARY' QMYSQL3: Unable to execute statement"

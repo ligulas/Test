@@ -1,0 +1,18 @@
+关于Qt5.8连不上mysql驱动
+
+
+Qt 5.8 默认是支持 mysql 驱动的,
+
+调用函数看QSqlDataBase 支持哪些驱动时可以看到 有QMYSQL QODBC QMYSQL3 等选项
+(如果看不到,可能是 sqldrivers 目录没有被程序找到 )
+
+但有的时候还是会出现 driver not load的现象 
+
+这个时候有可能是 Qt5.8 提供的 qsqlmysql.dll 或 qsqlmysqld.dll 没有找到 libmysql.dll 的位置(估计是qsqlmysql.dll 或 qsqlmysqld.dll 内部用的找寻路径所致)
+解决方法: 
+将Mysql 安装路径下的 \mysql\lib\libmysql.dll 拷贝到 \Qt\5.8.0\5.8\mingw53_32\bin 下(如果平台安装了Qt5.8的情况) ;
+并且 自己工程发布目录中的 sqldrivers 目录 记得也放入 libmysql.dll
+Qt 5.0以上版本 提供的 qsqlmysql.dll 或 qsqlmysqld.dll 还会去 C:\Windows 下找 libmysql.dll ,建议这个目录也放一个 libmysql.dll
+
+还有一个非常重要的特性就是安装Mysql时 文件路径不能有空格,否则发布工程时,即使在工程发布目录中 添加了如Qt5Core.dll等 动态库,可能还是找不到驱动,出现driver not load的现象 
+而此时(安装Mysql时 文件路径有空格) 在开发环境中却能载入库

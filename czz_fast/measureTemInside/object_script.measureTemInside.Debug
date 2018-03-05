@@ -1,0 +1,15 @@
+INPUT(
+./obj\main.o
+./obj\mainwindow.o
+./obj\qsocketthread.o
+./obj\qlog_message_handler.o
+./obj\qmy_global.o
+./obj\qreadini_config.o
+./obj\qdatastream_parsethread.o
+./obj\qdataoperator.o
+./obj\qwritedb_thread.o
+./obj\moc_mainwindow.o
+./obj\moc_qsocketthread.o
+./obj\moc_qdatastream_parsethread.o
+./obj\moc_qwritedb_thread.o
+);
